@@ -20,6 +20,6 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t laxeku/bstestje:latest .
-        docker login -u laxeku -p $DOCKER_PASSWORD
+        docker login -u laxeku -p ${{ secrets.DOCKER_PASSWORD }}
         docker push laxeku/bstestje:latest
 
